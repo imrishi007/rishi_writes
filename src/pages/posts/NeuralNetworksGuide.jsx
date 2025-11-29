@@ -52,7 +52,7 @@ const NeuralNetworksGuide = () => {
         <div className="formula" style={{ textAlign: 'center', margin: '2rem 0', fontSize: '1.2rem' }}>
           {'\\( \\sigma(x) = \\frac{1}{1 + e^{-x}} \\)'}
         </div>
-        <video controls style={{ maxWidth: '100%', height: 'auto', display: 'block', margin: '2rem auto' }}>
+        <video autoPlay loop muted playsInline style={{ maxWidth: '100%', height: 'auto', display: 'block', margin: '2rem auto' }}>
           <source src="/media/SigmoidAnimation.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -64,7 +64,7 @@ const NeuralNetworksGuide = () => {
         <div className="formula" style={{ textAlign: 'center', margin: '2rem 0', fontSize: '1.2rem' }}>
           {'\\( \\text{ReLU}(x) = \\max(0, x) \\)'}
         </div>
-        <video controls style={{ maxWidth: '100%', height: 'auto', display: 'block', margin: '2rem auto' }}>
+        <video autoPlay loop muted playsInline style={{ maxWidth: '100%', height: 'auto', display: 'block', margin: '2rem auto' }}>
           <source src="/media/ReLUFunction.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -81,7 +81,7 @@ const NeuralNetworksGuide = () => {
           <li><strong>Hidden Layers:</strong> These are the layers between input and output, where actual computation happens. Each neuron in a hidden layer takes inputs from the previous layer, processes them, and passes the result to the next layer. This is where the network starts to recognize patterns in data.</li>
           <li><strong>Output Layer:</strong> The final layer that gives the network’s prediction. In our digit recognition example, the output layer might have <strong>10 neurons</strong> (one for each digit from 0 to 9), with the neuron having the highest activation indicating the predicted number.</li>
         </ul>
-        <video controls style={{ maxWidth: '100%', height: 'auto', display: 'block', margin: '2rem auto' }}>
+        <video autoPlay loop muted playsInline style={{ maxWidth: '100%', height: 'auto', display: 'block', margin: '2rem auto' }}>
           <source src="/media/NeuralNetworkScene.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -101,7 +101,7 @@ const NeuralNetworksGuide = () => {
         <h2>Forward Propagation</h2>
         <p>Imagine you show our neural network a <strong>40×40 pixel image</strong> of a "<strong>9</strong>". It doesn’t see the 9 like we do; instead, it just gets a long list of <strong>numbers</strong> (pixel brightness values). Now, these numbers travel <strong>layer by layer</strong>, getting multiplied by <strong>weights</strong>, tweaked by <strong>biases</strong>, and transformed by <strong>activation functions</strong>. Finally, the network spits out an <strong>answer</strong>—ideally "<strong>9</strong>" (but sometimes something completely <strong>wrong</strong>, like "<strong>4</strong>" or "<strong>potato</strong>").</p>
         <p>This whole process of passing the <strong>input</strong> forward through the network is called <strong>forward propagation</strong>.</p>
-        <video controls style={{ maxWidth: '100%', height: 'auto', display: 'block', margin: '2rem auto' }}>
+        <video autoPlay loop muted playsInline style={{ maxWidth: '100%', height: 'auto', display: 'block', margin: '2rem auto' }}>
           <source src="/media/ForwardPropagationAnimation.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -118,7 +118,7 @@ const NeuralNetworksGuide = () => {
         <p>Now, knowing you made a <strong>mistake</strong> is great, but what’s next? The neural network needs to <strong>correct</strong> itself, and that’s where <strong>backpropagation</strong> comes in.</p>
         <p>Backpropagation is like your <strong>brain</strong> after embarrassing yourself in public—it <strong>replays</strong> the mistake over and over, <strong>adjusting</strong> things so it doesn’t happen again. The <strong>error</strong> from the output layer is sent <strong>backward</strong> through the network, tweaking <strong>weights</strong> and <strong>biases</strong> along the way.</p>
         <p>And how do we decide how much to tweak each <strong>weight</strong>? Enter <strong>gradient descent</strong>—basically, the network's way of making <strong>small</strong>, <strong>calculated changes</strong> to gradually <strong>improve</strong>. Think of it like adjusting your <strong>aim</strong> in a game; if you miss a shot, you tweak your aim <strong>slightly</strong> instead of throwing the whole <strong>controller</strong> away.</p>
-        <video controls style={{ maxWidth: '100%', height: 'auto', display: 'block', margin: '2rem auto' }}>
+        <video autoPlay loop muted playsInline style={{ maxWidth: '100%', height: 'auto', display: 'block', margin: '2rem auto' }}>
           <source src="/media/backpropagation.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
