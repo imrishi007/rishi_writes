@@ -7,6 +7,7 @@ import './BlogPost.css';
 const postComponents = {
   'getting-started-with-react-hooks': React.lazy(() => import('./posts/getting-started-with-react-hooks')),
   'neural-networks-guide': React.lazy(() => import('./posts/NeuralNetworksGuide')),
+  'quant-trading-backtesting': React.lazy(() => import('./posts/QuantTradingBacktesting')),
 };
 
 const BlogPost = () => {
@@ -49,8 +50,6 @@ const BlogPost = () => {
         <header className="blog-post-header">
           <div className="blog-post-meta">
             <span className="blog-post-date">{formatDate(post.date)}</span>
-            <span className="blog-post-separator">•</span>
-            <span className="blog-post-read-time">{post.readTime} min read</span>
           </div>
           <h1 className="blog-post-title">{post.title}</h1>
           {post.tags && post.tags.length > 0 && (
@@ -82,7 +81,6 @@ const BlogPost = () => {
             <img src="/logo1.jpeg" alt="Rishi Raval" className="author-image" />
             <div className="author-info">
               <span className="author-name">Rishi Raval</span>
-              <span className="author-title">Developer & Writer</span>
             </div>
           </div>
         </footer>

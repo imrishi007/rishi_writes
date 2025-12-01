@@ -20,8 +20,6 @@ const BlogCard = ({ post }) => {
       <div className="blog-card-content">
         <div className="blog-card-meta">
           <span className="blog-card-date">{formatDate(date)}</span>
-          <span className="blog-card-separator">•</span>
-          <span className="blog-card-read-time">{readTime} min read</span>
         </div>
         <h2 className="blog-card-title">{title}</h2>
         <p className="blog-card-excerpt">{excerpt}</p>

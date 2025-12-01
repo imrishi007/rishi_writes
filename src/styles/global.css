@@ -77,6 +77,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 18px;
+  scroll-padding-top: 100px;
 }
 
 body {
@@ -88,6 +89,7 @@ body {
   transition: background-color var(--transition-normal), color var(--transition-normal);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 /* Typography */

@@ -54,14 +54,11 @@
 
 .blog-card-date {
   font-weight: 500;
+  transition: color var(--transition-fast);
 }
 
-.blog-card-separator {
-  opacity: 0.5;
-}
-
-.blog-card-read-time {
-  opacity: 0.8;
+.blog-card:hover .blog-card-date {
+  color: var(--accent);
 }
 
 .blog-card-title {

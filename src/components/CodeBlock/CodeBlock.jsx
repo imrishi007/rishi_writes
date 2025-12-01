@@ -1,8 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import Prism from 'prismjs';
+import 'prismjs/components/prism-python';
+import 'prismjs/components/prism-javascript';
+import 'prismjs/components/prism-jsx';
 import './CodeBlock.css';
 
 const CodeBlock = ({ code, language = 'javascript', filename }) => {
   const [copied, setCopied] = useState(false);
+
+  const codeRef = useRef(null);
+
+  useEffect(() => {
+    // Highlight the code block after component mounts/updates
+    try {
+      if (codeRef.current) Prism.highlightElement(codeRef.current);
+    } catch (err) {
+      // silent fail if Prism isn't available for some reason
+      // console.warn('Prism highlight failed', err);
+    }
+  }, [code, language]);
 
   const handleCopy = async () => {
     try {
@@ -45,7 +61,7 @@ const CodeBlock = ({ code, language = 'javascript', filename }) => {
         </button>
       </div>
       <pre className="code-block-pre">
-        <code className={`language-${language}`}>
+        <code ref={codeRef} className={`language-${language}`}>
           {code}
         </code>
       </pre>
