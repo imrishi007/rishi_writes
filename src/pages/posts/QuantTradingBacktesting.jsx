@@ -8,7 +8,7 @@ const QuantTradingBacktesting = () => {
         I've always been fascinated by the idea of building strategies, implementing them on computers, testing them and then seeing if they can actually make us some money in the real market!!! And thus, I decided to build and understand the core of quant… Let's dive right into it!!
       </p>
 
-      <h2>How It Works</h2>
+      <h2 id="how-it-works">How It Works</h2>
       <p>So first let us understand how it works -</p>
       <ul>
         <li>Select a stock you are interested in</li>
@@ -26,7 +26,7 @@ const QuantTradingBacktesting = () => {
         We will be using the stock prices of AAPL stock for five years between 2018-23.
       </p>
 
-      <h2>Data Loading</h2>
+      <h2 id="data-loading">Data Loading</h2>
       <p>In order to import our data we use data_loader.py in src folder:</p>
 
       <CodeBlock
@@ -81,7 +81,7 @@ class DataLoader:
             return None`}
       />
 
-      <h2>Understanding Strategies</h2>
+      <h2 id="understanding-strategies">Understanding Strategies</h2>
       <p>
         Let us understand the core of this project now: "STRATEGIES"!!
       </p>
@@ -89,7 +89,7 @@ class DataLoader:
         We used two strategies in this and we will understand both of them in detail.
       </p>
 
-      <h3>SMA (Simple Moving Average)</h3>
+      <h3 id="sma-strategy">SMA (Simple Moving Average)</h3>
       <p>
         This is one of the most basic strategies used in finance. We use two lines for this:
       </p>
@@ -148,7 +148,7 @@ class DataLoader:
         SMA Equity Curve (50/200)
       </p>
 
-      <h3>RSI (Relative Strength Index)</h3>
+      <h3 id="rsi-strategy">RSI (Relative Strength Index)</h3>
       <p>
         The core concept of RSI is based on a rubber band. The more you stretch it, it fires in the opposite direction. All you do is average up the gain of the past 14 days and divide it by the loss over the same period.
       </p>
@@ -220,7 +220,7 @@ class DataLoader:
         RSI Equity Curve (14,30/70)
       </p>
 
-      <h3>Combining SMA and RSI</h3>
+      <h3 id="combining-strategies">Combining SMA and RSI</h3>
       <p>
         Okay so now this is where things get a little more interesting…
       </p>
@@ -305,7 +305,7 @@ class DataLoader:
         SMA + RSI Combined Strategy Equity Curve
       </p>
 
-      <h2>Results and Analysis</h2>
+      <h2 id="results-analysis">Results and Analysis</h2>
       <p>
         Alright now, let us see the results. RSI killed it here. But yeah it wasn't the default one which made us the most amount of profit. We optimised it and the RSI which got us maximum had the following config: buy when less than 30, sell when more than 80. So none of the base models performed best but the one with optimisation came out to be the best one of all!!!
       </p>
@@ -323,17 +323,17 @@ class DataLoader:
         </p>
       </div>
 
-      <h2>Why RSI Performed Best</h2>
+      <h2 id="why-rsi-best">Why RSI Performed Best</h2>
       <p>
         As far as the performance of our model is concerned, a simple reason why RSI performed the best was AAPL stock which we took was in a strong uptrend for most of the time we studied the stock, with small dips along the way, and our configuration of RSI catches those easily. We can say it is built for this situation lol. Default RSI reacted to too many trends and entered when dips weren't even that strong while SMA was too basic and slow to react even though it gave us a profit.
       </p>
 
-      <h2>Reality Check</h2>
+      <h2 id="reality-check">Reality Check</h2>
       <p>
         And for people thinking "Ohh it's so easy to make profits all you have to do is put in some predefined strategies into play and baammmm you'll be a billionaire!!" "Absolutely not!!!" This was just a basic demonstration using a very simple model to understand how backtesting works and how we can implement a strategy to see if we can actually work it out to make money in market. This isn't for real world scenarios. And the profits aren't real either, I haven't included the taxes and multiple costs like slippage, liquidity issues, short selling margin and what not.
       </p>
 
-      <h2>Conclusion</h2>
+      <h2 id="conclusion">Conclusion</h2>
       <p>
         I hope you understood the basic idea behind this blog and how one can implement a strategy and backtest it in the simplest way possible. I might have been wrong in multiple places but it is just the beginning for me and I look forward to many new learnings in future. Will try to make better projects with complex concepts in future.
       </p>

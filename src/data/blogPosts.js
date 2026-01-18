@@ -1,5 +1,14 @@
 const blogPosts = [
   {
+    slug: 'low-latency-security-hft',
+    title: 'Low-Latency Security in High-Frequency Trading',
+    excerpt: 'Explore how HFT systems execute millions of trades per second while maintaining security through kernel bypass, FPGA filtering, and multi-layered protection mechanisms.',
+    date: '2026-01-18',
+    readTime: 15,
+    tags: ['HFT', 'Security', 'Low-Latency', 'Trading', 'FPGA'],
+    image: '/blog_images/HFT_THUMBNAIL.png',
+  },
+  {
     slug: 'quant-trading-backtesting',
     title: 'Building and Backtesting Quantitative Trading Strategies',
     excerpt: 'Dive into the world of quantitative trading! Learn how to build, test, and optimize trading strategies using SMA and RSI indicators on real stock data.',
