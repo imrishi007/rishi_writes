@@ -125,7 +125,9 @@ const LowLatencySecurityHFT = () => {
           style={{ 
             maxWidth: '100%', 
             height: 'auto',
-            borderRadius: '8px'
+            borderRadius: '8px',
+            display: 'block',
+            margin: '0 auto'
           }} 
         />
       </div>
@@ -293,7 +295,9 @@ expected_seq++;`}
           style={{ 
             maxWidth: '100%', 
             height: 'auto',
-            borderRadius: '8px'
+            borderRadius: '8px',
+            display: 'block',
+            margin: '0 auto'
           }} 
         />
       </div>
