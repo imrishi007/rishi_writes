@@ -251,8 +251,8 @@ const LowLatencySecurityHFT = () => {
       </ul>
 
       <CodeBlock
-        language="javascript"
-        filename="validation.js"
+        language="cpp"
+        filename="validation.cpp"
         code={`if (msg.length < MIN_LEN || msg.length > MAX_LEN) drop();
 if (!isKnownType(msg.type)) drop();
 if (!validChecksum(msg)) drop();`}
@@ -263,8 +263,8 @@ if (!validChecksum(msg)) drop();`}
       </ul>
 
       <CodeBlock
-        language="javascript"
-        filename="sequence-check.js"
+        language="cpp"
+        filename="sequence-check.cpp"
         code={`if (msg.seq != expected_seq) {
     trigger_recovery();
     pause_trading();

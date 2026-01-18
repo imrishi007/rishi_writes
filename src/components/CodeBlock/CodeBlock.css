@@ -203,6 +203,142 @@
   font-weight: 600;
 }
 
+/* Additional token types for comprehensive language support */
+.code-block-pre .token.variable,
+.code-block-pre .variable {
+  color: #e06c75;
+}
+
+.code-block-pre .token.constant,
+.code-block-pre .constant,
+.code-block-pre .token.builtin {
+  color: #d19a66;
+  font-weight: 600;
+}
+
+.code-block-pre .token.tag,
+.code-block-pre .tag {
+  color: #e06c75;
+}
+
+.code-block-pre .token.attr-name,
+.code-block-pre .attr-name {
+  color: #d19a66;
+}
+
+.code-block-pre .token.boolean,
+.code-block-pre .boolean {
+  color: #d19a66;
+  font-weight: 600;
+}
+
+.code-block-pre .token.property,
+.code-block-pre .property {
+  color: #e06c75;
+}
+
+.code-block-pre .token.parameter,
+.code-block-pre .parameter {
+  color: #e06c75;
+}
+
+/* Verilog-specific highlighting */
+.code-block-pre .token.module,
+.code-block-pre .module {
+  color: #c678dd;
+  font-weight: 600;
+}
+
+.code-block-pre .token.always,
+.code-block-pre .always,
+.code-block-pre .token.posedge,
+.code-block-pre .posedge,
+.code-block-pre .token.negedge,
+.code-block-pre .negedge {
+  color: #c678dd;
+  font-weight: 600;
+}
+
+.code-block-pre .token.wire,
+.code-block-pre .wire,
+.code-block-pre .token.reg,
+.code-block-pre .reg,
+.code-block-pre .token.input,
+.code-block-pre .input,
+.code-block-pre .token.output,
+.code-block-pre .output {
+  color: #61afef;
+  font-weight: 600;
+}
+
+/* Light theme variants */
+[data-theme="light"] .code-block-pre .token.variable,
+[data-theme="light"] .code-block-pre .variable {
+  color: #001080;
+}
+
+[data-theme="light"] .code-block-pre .token.constant,
+[data-theme="light"] .code-block-pre .constant,
+[data-theme="light"] .code-block-pre .token.builtin {
+  color: #0000ff;
+  font-weight: 600;
+}
+
+[data-theme="light"] .code-block-pre .token.tag,
+[data-theme="light"] .code-block-pre .tag {
+  color: #800000;
+}
+
+[data-theme="light"] .code-block-pre .token.attr-name,
+[data-theme="light"] .code-block-pre .attr-name {
+  color: #ff0000;
+}
+
+[data-theme="light"] .code-block-pre .token.boolean,
+[data-theme="light"] .code-block-pre .boolean {
+  color: #0000ff;
+  font-weight: 600;
+}
+
+[data-theme="light"] .code-block-pre .token.property,
+[data-theme="light"] .code-block-pre .property {
+  color: #001080;
+}
+
+[data-theme="light"] .code-block-pre .token.parameter,
+[data-theme="light"] .code-block-pre .parameter {
+  color: #001080;
+}
+
+/* Verilog-specific light theme */
+[data-theme="light"] .code-block-pre .token.module,
+[data-theme="light"] .code-block-pre .module {
+  color: #0000ff;
+  font-weight: 600;
+}
+
+[data-theme="light"] .code-block-pre .token.always,
+[data-theme="light"] .code-block-pre .always,
+[data-theme="light"] .code-block-pre .token.posedge,
+[data-theme="light"] .code-block-pre .posedge,
+[data-theme="light"] .code-block-pre .token.negedge,
+[data-theme="light"] .code-block-pre .negedge {
+  color: #0000ff;
+  font-weight: 600;
+}
+
+[data-theme="light"] .code-block-pre .token.wire,
+[data-theme="light"] .code-block-pre .wire,
+[data-theme="light"] .code-block-pre .token.reg,
+[data-theme="light"] .code-block-pre .reg,
+[data-theme="light"] .code-block-pre .token.input,
+[data-theme="light"] .code-block-pre .input,
+[data-theme="light"] .code-block-pre .token.output,
+[data-theme="light"] .code-block-pre .output {
+  color: #795e26;
+  font-weight: 600;
+}
+
 /* Scrollbar for code blocks */
 .code-block-pre::-webkit-scrollbar {
   height: 8px;
