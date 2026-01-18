@@ -3,6 +3,9 @@ import Prism from 'prismjs';
 import 'prismjs/components/prism-python';
 import 'prismjs/components/prism-javascript';
 import 'prismjs/components/prism-jsx';
+import 'prismjs/components/prism-cpp';
+import 'prismjs/components/prism-c';
+import 'prismjs/components/prism-verilog';
 import './CodeBlock.css';
 
 const CodeBlock = ({ code, language = 'javascript', filename }) => {
