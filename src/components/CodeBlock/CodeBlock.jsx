@@ -5,13 +5,23 @@ import 'prismjs/components/prism-javascript';
 import 'prismjs/components/prism-jsx';
 import 'prismjs/components/prism-cpp';
 import 'prismjs/components/prism-c';
-import 'prismjs/components/prism-verilog';
 import './CodeBlock.css';
 
 const CodeBlock = ({ code, language = 'javascript', filename }) => {
   const [copied, setCopied] = useState(false);
 
   const codeRef = useRef(null);
+
+  // Map unsupported languages to similar ones
+  const getLanguageClass = (lang) => {
+    const languageMap = {
+      'verilog': 'c',
+      'systemverilog': 'c'
+    };
+    return languageMap[lang] || lang;
+  };
+
+  const effectiveLanguage = getLanguageClass(language);
 
   useEffect(() => {
     // Highlight the code block after component mounts/updates
@@ -21,7 +31,7 @@ const CodeBlock = ({ code, language = 'javascript', filename }) => {
       // silent fail if Prism isn't available for some reason
       // console.warn('Prism highlight failed', err);
     }
-  }, [code, language]);
+  }, [code, effectiveLanguage]);
 
   const handleCopy = async () => {
     try {
@@ -64,7 +74,7 @@ const CodeBlock = ({ code, language = 'javascript', filename }) => {
         </button>
       </div>
       <pre className="code-block-pre">
-        <code ref={codeRef} className={`language-${language}`}>
+        <code ref={codeRef} className={`language-${effectiveLanguage}`}>
           {code}
         </code>
       </pre>
